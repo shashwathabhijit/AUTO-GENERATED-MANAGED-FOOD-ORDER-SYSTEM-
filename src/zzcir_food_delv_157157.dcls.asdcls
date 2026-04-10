@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZCIR_FOOD_DELV_157157'
+@MappingRole: true
+define role ZZCIR_FOOD_DELV_157157 {
+  grant select on ZZCIR_FOOD_DELV_157157
+  where TRUE;
+}

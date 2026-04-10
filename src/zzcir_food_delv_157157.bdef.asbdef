@@ -1,0 +1,54 @@
+managed implementation in class ZZCIBP_R_FOOD_DELV_157157 unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZZCIR_FOOD_DELV_157157 alias ZzcirFoodDelv157157
+persistent table ZFOOD_DELV_157
+extensible
+draft table ZZCIFD_DLV_D157
+etag master LocLastChgAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   OrderID;
+
+  field ( readonly )
+   LocCreatedBy,
+   LocCreatedAt,
+   LocLastChgBy,
+   LocLastChgAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   OrderID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZFOOD_DELV_157 corresponding extensible
+  {
+    OrderID = ORDER_ID;
+    CustomerName = CUSTOMER_NAME;
+    FoodItem = FOOD_ITEM;
+    Quantity = QUANTITY;
+    OrderStatus = ORDER_STATUS;
+    DeliveryAgent = DELIVERY_AGENT;
+    TotalAmount = TOTAL_AMOUNT;
+    Currency = CURRENCY;
+    LocCreatedBy = LOC_CREATED_BY;
+    LocCreatedAt = LOC_CREATED_AT;
+    LocLastChgBy = LOC_LAST_CHG_BY;
+    LocLastChgAt = LOC_LAST_CHG_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZCIC_FOOD_DELV_157157'
+@MappingRole: true
+define role ZZCIC_FOOD_DELV_157157 {
+  grant select on ZZCIC_FOOD_DELV_157157
+  where INHERITING CONDITIONS FROM ENTITY ZZCIR_FOOD_DELV_157157 REPLACING { ROOT WITH _BaseEntity };
+}

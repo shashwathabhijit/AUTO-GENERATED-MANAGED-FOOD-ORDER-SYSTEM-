@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZZCIC_FOOD_DELV_157157'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZCIC_FOOD_DELV_157157'
+  }
+}
+define service ZZCIUI_FOOD_DELV_157_O4157 provider contracts odata_v4_ui {
+  expose ZZCIC_FOOD_DELV_157157;
+}
